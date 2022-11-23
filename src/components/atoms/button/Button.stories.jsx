@@ -1,18 +1,22 @@
-import { action } from "@storybook/addon-actions";
-
 import Button from "./Button";
+import { func, node, string } from "prop-types";
 
-export const text = () => (
-  <Button onClick={action("clicked")}>Just Button</Button>
-);
+const buttonClicked = (e) => {
+  e.preventDefault();
+  alert("Hello");
+};
 
-export const emoji = () => (
-  <Button onClick={action("clicked")}>
-    <span role="img" aria-label="so cool">
-      😄😎👍💯
-    </span>
-  </Button>
+export const basicButton = () => <Button>Basic button</Button>;
+export const functionButton = () => (
+  <Button onClick={buttonClicked}>Function button</Button>
 );
+export const linkedButton = () => <Button href="/route">Linked button</Button>;
+
+Button.propTypes = {
+  children: node.isRequired,
+  href: string,
+  onClick: func,
+};
 
 export default {
   title: "Button",
