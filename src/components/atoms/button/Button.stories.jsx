@@ -43,7 +43,7 @@ LinkedButton.args = {
 };
 
 export default {
-  title: "Button",
+  title: "Atoms/Button",
   component: Button,
   argTypes: {
     label: { control: "text" },

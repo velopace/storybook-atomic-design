@@ -1,4 +1,4 @@
-import { func, node, string } from "prop-types";
+import { func, string } from "prop-types";
 
 import StyledButton, { StyledLinkButton } from "./Button.styles";
 import { ReactComponent as IconBag } from "../../../assets/images/icons/shopping-bag.svg";
