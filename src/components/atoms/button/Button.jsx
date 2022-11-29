@@ -1,5 +1,4 @@
 import { func, node, string } from "prop-types";
-import React from "react";
 
 import StyledButton, { StyledLinkButton } from "./Button.styles";
 import { ReactComponent as IconBag } from "../../../assets/images/icons/shopping-bag.svg";
@@ -16,18 +15,18 @@ const Icons = {
   x: <IconX />,
 };
 
-const Button = ({ children, href, icon, onClick, variant }) => {
+const Button = ({ label, href, icon, onClick, variant }) => {
   if (!href)
     return (
       <StyledButton onClick={onClick} variant={variant}>
         {icon && <ButtonIcon name={icon} />}
-        {children}
+        {label}
       </StyledButton>
     );
   return (
     <StyledLinkButton href={href} variant={variant}>
       {icon && <ButtonIcon name={icon} />}
-      {children}
+      {label}
     </StyledLinkButton>
   );
 };
@@ -41,7 +40,7 @@ const ButtonIcon = ({ name }) => {
 };
 
 Button.propTypes = {
-  children: node.isRequired,
+  label: string,
   href: string,
   icon: string,
   onClick: func,
@@ -49,7 +48,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  children: "Button text",
+  label: "Button text",
   variant: "primary",
 };
 
