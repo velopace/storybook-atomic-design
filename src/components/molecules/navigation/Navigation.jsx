@@ -1,6 +1,6 @@
 import { arrayOf, shape, string } from "prop-types";
 
-import StyledNavigation from "./Navigation.styles";
+import StyledNavigation from "./navigation.styles";
 
 const Navigation = ({ direction, items }) => (
   <StyledNavigation direction={direction}>

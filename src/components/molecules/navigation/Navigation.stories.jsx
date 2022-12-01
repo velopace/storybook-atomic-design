@@ -1,4 +1,4 @@
-import Navigation from "./Navigation";
+import Navigation from "./navigation";
 
 const Template = (args) => <Navigation {...args} />;
 const items = [
