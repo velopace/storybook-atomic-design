@@ -48,7 +48,7 @@ Footer.propTypes = {
 };
 
 Footer.defaultProps = {
-  menues: [],
+  menus: [],
 };
 
 export default Footer;

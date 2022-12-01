@@ -4,14 +4,14 @@ const Template = (args) => <Intro {...args} />;
 
 export const standardIntro = Template.bind({});
 standardIntro.args = {
-  subtitle: "related posts",
-  title: "continue Reading Our Beauty Insights",
-  text: "Multi Award Winning Spa Manager Clare Pritchard shares the story of Celtic Elements",
   cta: {
-    href: "https://domain.com",
-    label: "View All Posts",
-    target: "_blank",
+    href: "/posts",
+    label: "View all posts",
+    target: null,
   },
+  subtitle: "Related posts",
+  text: "Multi Award Winning Spa Manager Clare Pritchard shares the story of Celtic Elements.",
+  title: "Continue reading our beauty insights",
 };
 
 export default {
