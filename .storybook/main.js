@@ -13,5 +13,5 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
-  addons: ["storybook-addon-designs"],
+  // addons: ["storybook-addon-designs"],
 };
